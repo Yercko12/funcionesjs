@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4_colores</title>
+</head>
+
+<body>
+    <h1>Cambio de color a negro</h1>
+
+    <div id="azul" style="width: 200px; height: 200px; background-color: blue;"></div>
+    <div id="rojo" style="width: 200px; height: 200px; background-color: red;"></div>
+    <div id="verde" style="width: 200px; height: 200px; background-color: green;"></div>
+    <div id="amarillo" style="width: 200px; height: 200px; background-color: yellow;"></div>
+
+
+
+    <div id="contenedor"></div>
+
+    <script>
+
+        function cambiarColor(element) {
+            element.target.style.backgroundColor = "black";
+        }
+        document.getElementById("azul").addEventListener("click", cambiarColor);
+        document.getElementById("rojo").addEventListener("click", cambiarColor);
+        document.getElementById("verde").addEventListener("click", cambiarColor);
+        document.getElementById("amarillo").addEventListener("click", cambiarColor);
+
+    </script>
+
+
+
+
+</body>
+
+</html>

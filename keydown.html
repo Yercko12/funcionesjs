@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Color</title>
+
+</head>
+<body>
+    <div id="key" style=" width: 200px;height: 200px;background-color: white;border: 2px solid black;"></div>
+
+    <script>
+        let color = '';
+
+        const colorMap = {
+            'a': 'pink',   
+            's': 'orange', 
+            'd': 'lightblue', 
+            'q': 'purple', 
+            'w': 'gray',   
+            'e': 'brown'   
+        };
+
+        
+        function cambiarColor(event) {
+            const presionar = event.key; 
+
+            
+            if (colorMap[presionar]) {
+                if (presionar === 'q' || presionar === 'w' || presionar === 'e') {
+                    agregar(colorMap[presionar]); 
+                } else {
+                    color = colorMap[presionar]; 
+                    document.getElementById('key').style.backgroundColor = color; 
+                }
+            }
+        }
+
+    
+        function agregar(color) {
+            const agregar = document.createElement('div');
+            agregar.style.width = '200px';
+            agregar.style.height = '200px';
+            agregar.style.backgroundColor = color;
+            agregar.style.border = '2px solid black';
+            document.body.appendChild(agregar);
+        }
+
+        document.addEventListener('keydown', cambiarColor);
+    </script>
+</body>
+</html>
